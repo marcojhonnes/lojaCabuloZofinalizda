@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <header id="inicio">
+    <h1>🛒 Loja CabuloZo</h1>
+    
+    <nav>
+      <ul class="menu">
+        <!-- <li><a href="index.html">Início</a></li> -->
+        <li><a href="sobreNos.html">Sobre Nós</a></li>
+        <li><a href="loja.html">Loja</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+      </ul>
+    </nav>
+    <button id="open-cart">Carrinho (<span id="cart-count">0</span>)</button>
+  </header>
+  <main>
+    <section id="contato">
+      <h2>CADASTRO</h2>
+      <input type="text" placeholder="Seu nome">
+      <input type="number" placeholder="Seu CPF">
+      <input type="number" placeholder="Numero do seu Celular">
+      <input type="text" placeholder="Seu endereço">
+      <input type="email" placeholder="Seu E-mail">
+      <input type="text" placeholder="Nome igual está no seu cartão">
+      <input type="number" placeholder="Numero do seu cartão">
+      <input type="number" placeholder="Codigo segurança do seu cartão">
+      <!-- <textarea name="" id="" placeholder="Sua mensgem"></textarea> -->
+      <button type="submit">Cadastrar</button>
+    </section>
+  </main>
+  <aside id="cart" class="hidden">
+    <h2>Carrinho</h2>
+    <ul id="cart-items"></ul>
+    <div class="cart-footer">
+      <p id="cart-total">Total: R$ 0,00</p>
+      <button id="clear-cart">Limpar Carrinho</button>
+      <button id="checkout">Finalizar Compra</button>
+      <button id="close-cart">Fechar</button>
+    </div>
+  </aside>
+  <footer>
+    <p>&copy; 2025 Loja Virtual Completa</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

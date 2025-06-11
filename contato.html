@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loja Virtual Completa</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header id="inicio">
+    <h1>🛒 Loja CabuloZo</h1>
+    
+    <nav>
+      <ul class="menu">
+        <!-- <li><a href="index.html">Início</a></li> -->
+        <li><a href="sobreNos.html">Sobre Nós</a></li>
+        <li><a href="loja.html">Loja</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="cadastro.html">Contato</a></li>
+      </ul>
+    </nav>
+    <button id="open-cart">Carrinho (<span id="cart-count">0</span>)</button>
+  </header>
+  <main>
+    <section id="cadastro">
+      <h2>Fale Conosco</h2>
+      <div class="icones-contato">
+        <a href="https://wa.me/5531992145630" target="_blank"><img src="./imagens/icon_watzapp.png" alt=""></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="./imagens/icon_instagran.jpeg" alt=""></a>
+        <a href="https://pt-br.facebook.com/login" target="_blank"><img src="./imagens/icon_faceboock.png" alt=""></a>
+        <a href="tel:+5531992145630"><img src="./imagens/icon_tell.png" alt=""></a>
+        <a href="https://github.com/" target="_blank"><img src="./imagens/icon_github-64.png" alt=""></a>
+        <a href="https://www.linkedin.com/feed/" target="_blank"><img src="./imagens/icon_linkedin.jpeg" alt=""></a>
+      </div>
+      <h3>Deixe-nos uma mensagem</h3>
+      <textarea name="" id="" placeholder="Sua mensgem"></textarea>
+    </section>
+  </main>
+  <aside id="cart" class="hidden">
+    <h2>🛒 Carrinho</h2>
+    <ul id="cart-items"></ul>
+    <div class="cart-footer">
+      <p id="cart-total">Total: R$ 0,00</p>
+      <button id="clear-cart">Limpar Carrinho</button>
+      <button id="checkout">Finalizar Compra</button>
+      <button id="close-cart">Fechar</button>
+    </div>
+  </aside>
+
+  <footer>
+    <p>&copy; 2025 Loja Virtual Completa</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
