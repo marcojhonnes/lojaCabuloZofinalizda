@@ -1,23 +1,51 @@
-let products = JSON.parse(localStorage.getItem('produtos')) || [];
+// Produtos fictícios
+
+const produtosFicticios = {
+  1: { id: 1, name: 'Camisa Teste', price: 100, qtd: 20, imagem: 'imagens/camisaf3' },
+  2: { id: 2, name: 'Camisa Teste 1', price: 190, qtd: 10, imagem: 'imagens/camisaf3' },
+  3: { id: 3, name: 'Camisa Teste 2', price: 190, qtd: 10, imagem: 'imagens/camisaf3' }
+};
+
+// Recuperar produtos do localStorage
+let produtosLS = JSON.parse(localStorage.getItem('produtos')) || {};
+
+// Se produtos estiverem salvos como array, converte para objeto
+if (Array.isArray(produtosLS)) {
+  const convertido = {};
+  produtosLS.forEach(p => convertido[p.id] = p);
+  produtosLS = convertido;
+}
+
+// Mescla com os fictícios sem sobrescrever os existentes
+let produtos = { ...produtosFicticios, ...produtosLS };
+
+// Atualiza localStorage unificado
+localStorage.setItem('produtos', JSON.stringify(produtos));
+
 let cart = [];
 
-// Renderizar Produtos
+// Função para renderizar os produtos
 function renderProducts() {
   const productList = document.getElementById('product-list');
   if (!productList) return;
 
   productList.innerHTML = '';
 
-  products.forEach(product => {
+  Object.values(produtos).forEach(product => {
+    if (!product || typeof product.price !== 'number') return;
+
     const div = document.createElement('div');
     div.className = 'product';
-    div.innerHTML = `
-      <button class="delete-product" onclick="deleteProduct(${product.id})">×</button>
-      <h3>${product.name}</h3>
-      <img src="${product.imagem}" alt="Imagem do produto" style="width: 200px; margin: 10px;">
-      <p>R$ ${product.price.toFixed(2)}</p>
-      <button onclick="addToCart(${product.id})">Adicionar ao Carrinho</button>
-    `;
+    const isFuncionario = window.location.pathname.includes('administrador.html');
+
+div.innerHTML = `
+  ${isFuncionario ? `<button class="delete-product" onclick="deleteProduct(${product.id})">×</button>` : ''}
+  <h3>${product.name}</h3>
+  <img src="${product.imagem}" alt="Imagem do produto" style="width: 200px; margin: 10px;">
+  <p>R$ ${product.price.toFixed(2)}</p>
+  <button onclick="addToCart(${product.id})">Adicionar ao Carrinho</button>
+`;
+
     productList.appendChild(div);
   });
 }
@@ -26,28 +54,31 @@ function renderProducts() {
 const addBtn = document.getElementById('add-product');
 if (addBtn) {
   addBtn.addEventListener('click', () => {
-    const name = document.getElementById('product-name').value;
+    const name = document.getElementById('product-name').value.trim();
     const price = parseFloat(document.getElementById('product-price').value);
-    const imagem = document.getElementById('caminhoImagem').value;
+    const qtd = parseInt(document.getElementById('product-qtd').value);
+    const imagem = document.getElementById('caminhoImagem').value.trim();
 
-    if (name && price > 0 && imagem) {
-      products.push({ id: Date.now(), name, price, imagem });
-      localStorage.setItem('produtos', JSON.stringify(products));
+    if (name && price > 0 && qtd > 0 && imagem) {
+      const id = Date.now();
+      produtos[id] = { id, name, price, qtd, imagem };
+      localStorage.setItem('produtos', JSON.stringify(produtos));
       renderProducts();
 
       // Limpar campos
       document.getElementById('product-name').value = '';
       document.getElementById('product-price').value = '';
+      document.getElementById('product-qtd').value = '';
       document.getElementById('caminhoImagem').value = '';
     } else {
-      alert('Preencha o nome, preço e imagem corretamente.');
+      alert('Preencha o nome, preço, quantidade e imagem corretamente.');
     }
   });
 }
 
 // Adicionar ao Carrinho
 function addToCart(productId) {
-  const product = products.find(p => p.id === productId);
+  const product = produtos[productId];
   const item = cart.find(i => i.product.id === productId);
 
   if (item) {
@@ -87,7 +118,7 @@ function updateCart() {
   cartCount.textContent = count;
 }
 
-// Mudar quantidade
+// Mudar quantidade no carrinho
 function changeQuantity(productId, newQuantity) {
   const item = cart.find(i => i.product.id === productId);
   if (item && newQuantity >= 1) {
@@ -102,16 +133,16 @@ function removeFromCart(productId) {
   updateCart();
 }
 
-// Deletar Produto
+// Deletar produto
 function deleteProduct(productId) {
-  products = products.filter(p => p.id !== productId);
+  delete produtos[productId];
   cart = cart.filter(item => item.product.id !== productId);
-  localStorage.setItem('produtos', JSON.stringify(products));
+  localStorage.setItem('produtos', JSON.stringify(produtos));
   renderProducts();
   updateCart();
 }
 
-// Limpar Carrinho
+// Limpar carrinho
 const clearBtn = document.getElementById('clear-cart');
 if (clearBtn) {
   clearBtn.addEventListener('click', () => {
@@ -122,7 +153,7 @@ if (clearBtn) {
   });
 }
 
-// Finalizar Compra
+// Finalizar compra
 const checkoutBtn = document.getElementById('checkout');
 if (checkoutBtn) {
   checkoutBtn.addEventListener('click', () => {
@@ -133,14 +164,13 @@ if (checkoutBtn) {
 
     const total = cart.reduce((sum, item) => sum + item.product.price * item.quantity, 0);
     alert(`Compra realizada com sucesso!\nTotal da compra: R$ ${total.toFixed(2)}`);
-
     cart = [];
     updateCart();
     document.getElementById('cart').classList.remove('show');
   });
 }
 
-// Abrir / Fechar Carrinho
+// Abrir e fechar carrinho
 const openCartBtn = document.getElementById('open-cart');
 const closeCartBtn = document.getElementById('close-cart');
 
@@ -155,7 +185,7 @@ if (closeCartBtn) {
   });
 }
 
-// Renderiza os produtos ao carregar a página
+// Renderiza ao carregar a página
 window.addEventListener('DOMContentLoaded', () => {
   renderProducts();
 });

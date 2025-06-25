@@ -1,40 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>Cadastro</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <header id="inicio">
+  <header id="inicio">
     <h1>🛒 Loja CabuloZo</h1>
-    
     <nav>
       <ul class="menu">
-        <!-- <li><a href="index.html">Início</a></li> -->
         <li><a href="sobreNos.html">Sobre Nós</a></li>
-        <li><a href="loja.html">Loja</a></li>
+        <li><a href="index.html">Loja</a></li>
         <li><a href="contato.html">Contato</a></li>
         <li><a href="cadastro.html">Cadastro</a></li>
+        <div>
+          <li><a href="login.html"><img src="./imagens/Sem título.png" alt=""></a></li>
+          <li><h4>Para Colaboradores</h4></li>
+        </div>
       </ul>
     </nav>
     <button id="open-cart">Carrinho (<span id="cart-count">0</span>)</button>
   </header>
   <main>
+    <h4 id="men"></h4>
+    <!-- </div> -->
+    <div class="container">
+      <p id="text"></p>
+        <h1 id="novaMenssagem"></h1>
+        <!-- <p id="mensagem"></p> -->
+    </div>
+        <p id="msg"></p>
+        <p id="equipamentos-lista"></p>
     <section id="contato">
       <h2>CADASTRO</h2>
-      <input type="text" placeholder="Seu nome">
-      <input type="number" placeholder="Seu CPF">
-      <input type="number" placeholder="Numero do seu Celular">
-      <input type="text" placeholder="Seu endereço">
-      <input type="email" placeholder="Seu E-mail">
-      <input type="text" placeholder="Nome igual está no seu cartão">
-      <input type="number" placeholder="Numero do seu cartão">
-      <input type="number" placeholder="Codigo segurança do seu cartão">
-      <!-- <textarea name="" id="" placeholder="Sua mensgem"></textarea> -->
-      <button type="submit">Cadastrar</button>
+      <input id="id" type="number" placeholder="Digite o ID">
+      <input id="nome" type="text" placeholder="Seu nome">
+      <input id="senha" type="password" placeholder="Sua senha">
+      <input id="cpf" type="text" placeholder="Seu CPF">
+      <input id="celular" type="number" placeholder="Número do seu Celular">
+      <input id="endereco" type="text" placeholder="Seu endereço">
+      <input id="email" type="email" placeholder="Seu E-mail">
+      <input id="nomeCartao" type="text" placeholder="Nome como está no cartão"> <!-- Corrigido -->
+      <input id="numeroCartao" type="number" placeholder="Número do seu cartão">
+      <input id="codigoCartao" type="number" placeholder="Código de segurança do cartão">
+      <button id="btn" type="button">Cadastrar</button>
+      <button onclick="resetarEstoque()">Resetar Estoque</button>
     </section>
+    <div id="paragrafo">
+    </div>
   </main>
   <aside id="cart" class="hidden">
     <h2>Carrinho</h2>
@@ -47,9 +62,13 @@
     </div>
   </aside>
   <footer>
-    <p>&copy; 2025 Loja Virtual Completa</p>
+    <p>&copy; 2025 Loja KabuloZo. Todos os direitos reservados.</p>
   </footer>
-
   <script src="script.js"></script>
+  <script src="arquivo.js"></script>
+  <script src="menu.js"></script>
+  <script src="cadastro.js"></script>
+  <script src="boasVindas.js"></script>
+  <script src="login.js"></script>
 </body>
 </html>

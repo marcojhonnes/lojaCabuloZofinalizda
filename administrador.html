@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loja Virtual Completa</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header id="inicio">
+    <h1>🛒 Loja CabuloZo</h1>
+    
+    <nav>
+      <ul class="menu">
+        <!-- <li><a href="index.html" >Início</a></li> -->
+        <li><a href="sobreNos.html">Sobre Nós</a></li>
+        <li><a href="index.html">Loja</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+      </ul>
+    </nav>
+    <button id="open-cart">Carrinho (<span id="cart-count">0</span>)</button>
+  </header>
+  <main>
+    <div class="container">
+      <p id="text"></p>
+        <h1 id="novaMenssagem"></h1>
+        <div id="lista-imagens"></div>
+
+        <select class="batman" name="opcao" id="escolha">
+            <option id="1" value="0">OPÇÕES</option>
+            <option value="1">CADASTRAR COLABORADORES</option>
+            <option value="2">PESQUISAR COLABORADORES POR NOME</option>
+            <option value="3">PESQUISAR COLABORADORES POR ID</option>
+            <option value="4">LISTAR TODOS OS COLABORADORES</option>
+            <option value="5">EXCLUIR COLABORADORES ID</option>
+            <option value="6">EXCLUIR COLABORADORES NOME</option>
+            <option value="7">ADICIONAR PRODUTOS</option>
+            <option value="8">LISTAR TODOS PRODUTOS</option>
+            <option value="9">LISTAR TODOS CLIENTES</option>
+            <option value="10">EXCLUIR CLIENTE POR NOME</option>
+            <option value="11">EXCLUIR CLIENTE POR ID</option>
+            <option value="12">LISTAR IMAGEM DO PRODUTO</option>
+            <option value="13">SAIR</option>
+        </select>
+    </div>
+    <section id="product-form">
+      <h2>Cadastro de Produto</h2>
+      <input type="text" id="product-name" placeholder="Nome do Produto" />
+      <input type="number" id="product-price" placeholder="Preço do Produto" />
+      <input type="number" id="product-qtd" placeholder="quantidade do Produto" />
+      <input type="text" id="caminhoImagem" placeholder="Ex: imagens/foto1.jpg" />
+      <button id="add-product">Cadastrar Produto</button>
+    </section>
+    <div id="adm" class="container">
+    </div>
+        <p id="msg"></p>
+        <p id="equipamentos-lista"></p>
+    <section id="product-list">
+      <h2>Produtos Disponíveis</h2>
+    </section>
+  </main>
+  <aside id="cart" class="hidden">
+    <h2>🛒 Carrinho</h2>
+    <ul id="cart-items"></ul>
+    <div class="cart-footer">
+      <p id="cart-total">Total: R$ 0,00</p>
+      <button id="clear-cart">Limpar Carrinho</button>
+      <button id="checkout">Finalizar Compra</button>
+      <button id="close-cart">Fechar</button>
+    </div>
+  </aside>
+  <footer>
+    <p>&copy; 2025 Loja KabuloZo. Todos os direitos reservados.</p>
+  </footer>
+  <script src="script.js"></script>
+  <script src="arquivo.js"></script>
+  <script src="menu.js"></script>
+  <script src="login.js"></script>
+  <script src="cadastro.js"></script>
+  <script src="boasVindas.js"></script>
+</body>
+</html>

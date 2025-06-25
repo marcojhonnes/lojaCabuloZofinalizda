@@ -3,39 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Loja Virtual Completa</title>
+  <title>Loja Virtual CabuloZo</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header id="inicio">
     <h1>🛒 Loja CabuloZo</h1>
-    
     <nav>
       <ul class="menu">
-        <li><a href="index.html">Início</a></li>
         <li><a href="sobreNos.html">Sobre Nós</a></li>
-        <li><a href="loja.html">Loja</a></li>
+        <li><a href="index.html">Loja</a></li>
         <li><a href="contato.html">Contato</a></li>
         <li><a href="cadastro.html">Cadastro</a></li>
+        <div class="colaborador-acesso">
+      <a href="login.html">
+        <img src="./imagens/Sem título.png" alt="Login Colaborador">
+        <h4>Para Colaboradores</h4>
+      </a>
+    </div>
       </ul>
     </nav>
     <button id="open-cart">Carrinho (<span id="cart-count">0</span>)</button>
   </header>
-
   <main>
-    <section id="product-form">
-      <h2>Cadastro de Produto</h2>
-      <input type="text" id="product-name" placeholder="Nome do Produto" />
-      <input type="number" id="product-price" placeholder="Preço do Produto" />
-      <input type="text" id="caminhoImagem" placeholder="Ex: imagens/foto1.jpg" />
-      <button id="add-product">Cadastrar Produto</button>
-    </section>
-
+    <div class="container">
+      <p id="text"></p>
+        <h1 id="novaMenssagem"></h1>
+        <!-- <p id="mensagem"></p> -->
+    </div>
     <section id="product-list">
       <h2>Produtos Disponíveis</h2>
     </section>
+    
   </main>
-
   <aside id="cart" class="hidden">
     <h2>🛒 Carrinho</h2>
     <ul id="cart-items"></ul>
@@ -48,8 +48,13 @@
   </aside>
 
   <footer>
-    <p>&copy; 2025 Loja Virtual Completa</p>
+    <p>&copy; 2025 Loja KabuloZo. Todos os direitos reservados.</p>
   </footer>
   <script src="script.js"></script>
+  <script src="arquivo.js"></script>
+  <script src="menu.js"></script>
+  <script src="login.js"></script>
+  <script src="cadastro.js"></script>
+  <script src="boasVindas.js"></script>
 </body>
 </html>
