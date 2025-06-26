@@ -7,11 +7,13 @@ window.addEventListener('load', function() {
         const texto = document.getElementById('text');
 
         if (tipoUsuario === 'colaborador') {
-            if (mensagem) mensagem.innerText = `Bem-vindo ao Painel Administrativo, ${nomeUsuario}!`;
-            if (texto) texto.innerText = `Olá ${nomeUsuario}, pronto para administrar a loja?`;
+            // if (mensagem) mensagem.innerText = `Olá ${nomeUsuario}, bom trabalho!`;
+            if (texto) texto.innerText = `Bem-vindo ao Painel Administrativo, ${nomeUsuario}!`;
+            texto.style.fontSize = '30px'
         } else if (tipoUsuario === 'cliente') {
-            if (mensagem) mensagem.innerText = `Bem-vindo(a) à Loja Kabuloso, ${nomeUsuario}!`;
-            if (texto) texto.innerText = `Olá ${nomeUsuario}, boas compras!`;
+            // if (mensagem) mensagem.innerText = `Bem-vindo(a) à Loja KabuloZo, ${nomeUsuario}!`;
+            if (texto) texto.innerText = `Olá ${nomeUsuario}, vinndo a loja Cabulozo!`;
+            texto.style.fontSize = '30px'
         }
     }
 });
