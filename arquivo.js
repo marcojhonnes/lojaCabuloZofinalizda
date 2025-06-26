@@ -39,17 +39,17 @@ function adicionarProduto() {
   idProduto.id = 'input1';
   idProduto.type = 'number';
   idProduto.placeholder = 'Digite o ID';
-
+  
   const nomeProduto = document.createElement('input');
   nomeProduto.id = 'input2';
   nomeProduto.type = 'text';
   nomeProduto.placeholder = 'Digite o Nome do Produto';
-
+ 
   const valorProduto = document.createElement('input');
   valorProduto.id = 'input3';
   valorProduto.type = 'number';
   valorProduto.placeholder = 'Digite o Valor do Produto';
-
+  
   const quantidadeProduto = document.createElement('input');
   quantidadeProduto.id = 'input4';
   quantidadeProduto.type = 'number';
@@ -112,6 +112,10 @@ function mostrarColaboradoresNome() {
   entrada.type = 'text';
   entrada.placeholder = 'Digite o Nome do Funcionário';
 
+  entrada.style.width = '250px';
+  entrada.style.height = '40px';
+  entrada.style.fontSize = '20px';
+  
   const botaoBuscar = document.createElement('button');
   botaoBuscar.textContent = 'Pesquisar';
 
@@ -151,7 +155,9 @@ function mostrarColaboradoresId() {
   entrada.id = 'input1';
   entrada.type = 'number';
   entrada.placeholder = 'Digite o ID do Funcionário';
-
+  entrada.style.width = '250px';
+  entrada.style.height = '40px';
+  entrada.style.fontSize = '20px';
   const botaoBuscar = document.createElement('button');
   botaoBuscar.textContent = 'Pesquisar';
 
@@ -203,7 +209,9 @@ function excluirColaboradorId() {
   entrada.id = 'input1';
   entrada.type = 'number';
   entrada.placeholder = 'Digite o ID do Funcionário a ser excluído';
-
+  entrada.style.width = '250px';
+  entrada.style.height = '40px';
+  entrada.style.fontSize = '20px';
   const botaoExcluir = document.createElement('button');
   botaoExcluir.textContent = 'EXCLUIR';
 
@@ -236,7 +244,9 @@ function excluirColaboradorNome() {
   entrada.id = 'input1';
   entrada.type = 'text';
   entrada.placeholder = 'Digite o nome do Funcionário a ser excluído';
-
+  entrada.style.width = '250px';
+  entrada.style.height = '40px';
+  entrada.style.fontSize = '20px';
   const botaoExcluir = document.createElement('button');
   botaoExcluir.textContent = 'EXCLUIR';
 

@@ -118,37 +118,51 @@ function cadastrarColaborador() {
   id.id = 'input1';
   id.type = 'number';
   id.placeholder = 'Digite o ID';
-
+  id.style.width = '250px';
+  id.style.height = '40px';
+  id.style.fontSize = '20px';
   const email = document.createElement('input');
   email.id = 'input2';
   email.type = 'text';
   email.placeholder = 'Digite o E-mail';
-
+  email.style.width = '250px';
+  email.style.height = '40px';
+  email.style.fontSize = '20px';
   const cargo = document.createElement('input');
   cargo.id = 'input3';
   cargo.type = 'text';
   cargo.placeholder = 'Digite o Cargo';
-
+  cargo.style.width = '250px';
+  cargo.style.height = '40px';
+  cargo.style.fontSize = '20px';
   const nome = document.createElement('input');
   nome.id = 'input4';
   nome.type = 'text';
   nome.placeholder = 'Digite o Nome';
-
+  nome.style.width = '250px';
+  nome.style.height = '40px';
+  nome.style.fontSize = '20px';
   const senha = document.createElement('input');
   senha.id = 'input5';
   senha.type = 'password';
   senha.placeholder = 'Digite a Senha';
-
+  senha.style.width = '250px';
+  senha.style.height = '40px';
+  senha.style.fontSize = '20px';
   const confirmarSenha = document.createElement('input');
   confirmarSenha.id = 'input6';  // alterado para evitar conflito
   confirmarSenha.type = 'password';
   confirmarSenha.placeholder = 'Confirme a Senha';
-
+  confirmarSenha.style.width = '250px';
+  confirmarSenha.style.height = '40px';
+  confirmarSenha.style.fontSize = '20px';
   const data = document.createElement('input');
   data.id = 'input7';  // alterado para manter sequência
   data.type = 'text';
   data.placeholder = 'Digite a Data de Admissão';
-
+  data.style.width = '250px';
+  data.style.height = '40px';
+  data.style.fontSize = '20px';
   const botaoCadastrar = document.createElement('button');
   botaoCadastrar.textContent = 'Cadastrar';
 
@@ -206,7 +220,9 @@ function excluirClienteNome() {
   input.id = 'input2';
   input.type = 'text';
   input.placeholder = 'Digite o nome do cliente';
-
+  input.style.width = '250px';
+  input.style.height = '40px';
+  input.style.fontSize = '20px';
   const botao = document.createElement('button');
   botao.textContent = 'Excluir por Nome';
   botao.onclick = function () {
@@ -245,6 +261,9 @@ function excluirClienteId() {
   input.type = 'number';
   input.placeholder = 'Digite o ID do cliente';
 
+  input.style.width = '250px';
+  input.style.height = '40px';
+  input.style.fontSize = '20px';
   const botao = document.createElement('button');
   botao.textContent = 'Excluir por ID';
   botao.onclick = function () {

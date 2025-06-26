@@ -120,6 +120,17 @@ main {
   background: #0056b3;
 }
 
+.batman {
+  width: 100%;
+  max-width: 370px;
+  height: 40px;
+  
+  padding-right: 50px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+} 
+
 .delete-product {
   position: absolute;
   top: 5px;
