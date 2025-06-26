@@ -74,6 +74,10 @@ main {
   max-width: 300px;
 }
 
+#product-form h2 {
+ color: #1171d1;
+}
+
 #product-list {
   display: flex;
   justify-content: center;
@@ -105,6 +109,7 @@ main {
 
 .product h3, .product p {
   margin-bottom: 10px;
+
 }
 
 .product button {
@@ -114,10 +119,29 @@ main {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-top: 25px;
 }
 
 .product button:hover {
   background: #0056b3;
+}
+
+.product h3 {
+  color: #0056b3;
+}
+
+.product p {
+  color: #968903;;
+}
+
+#btn {
+   padding: 8px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 25px;
 }
 
 .batman {
@@ -470,4 +494,10 @@ img {
   height: auto;
   display: block;
   margin: 20px auto;
+}
+
+#add-product {
+  margin-top: 25px;
+  background-color: #1171d1;
+  color: white;
 }
