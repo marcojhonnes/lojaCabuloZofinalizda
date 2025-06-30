@@ -1,9 +1,18 @@
 // Produtos fictícios
 
 const produtosFicticios = {
-  1: { id: 1, name: 'Camisa Teste', price: 100, qtd: 20, imagem: 'imagens/camisaf3' },
-  2: { id: 2, name: 'Camisa Teste 1', price: 190, qtd: 10, imagem: 'imagens/camisaf3' },
-  3: { id: 3, name: 'Camisa Teste 2', price: 190, qtd: 10, imagem: 'imagens/camisaf3' }
+  1: { id: 1, name: 'Camisa 2025', price: 100, qtd: 20, imagem: 'imagens/camisa1' },
+  2: { id: 2, name: 'Camisa 2024', price: 190, qtd: 10, imagem: 'imagens/camisaf3' },
+  3: { id: 3, name: 'Camisa 2 2024', price: 190, qtd: 10, imagem: 'imagens/camisa7' },
+  4: { id: 4, name: 'Camisa 3 2023', price: 190, qtd: 10, imagem: 'imagens/camisa9' },
+  5: { id: 5, name: 'Camisa 3 2023', price: 190, qtd: 10, imagem: 'imagens/camisa5' },
+  6: { id: 6, name: 'Camisa 3 2023', price: 190, qtd: 10, imagem: 'imagens/camisa6' },
+  7: { id: 7, name: 'Agasalho 2023', price: 190, qtd: 10, imagem: 'imagens/agasalho1' },
+  8: { id: 8, name: 'Agasalho 3 2024', price: 190, qtd: 10, imagem: 'imagens/agasalho3' },
+  9: { id: 9, name: 'Agasaho 3 2023', price: 190, qtd: 10, imagem: 'imagens/agasalho6' },
+  10: { id: 10, name: 'Agasaho 3 2023', price: 190, qtd: 10, imagem: 'imagens/agasalho4' },
+  11: { id: 11, name: 'Agasaho 3 2023', price: 190, qtd: 10, imagem: 'imagens/agasalho5' },
+  12: { id: 12, name: 'Agasaho 3 2023', price: 190, qtd: 10, imagem: 'imagens/camisag6' },
 };
 
 // Recuperar produtos do localStorage

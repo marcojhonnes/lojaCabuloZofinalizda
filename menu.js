@@ -1,8 +1,8 @@
 function limparPagina() {
-    administrador.innerHTML = ''
-    paragrafo.innerHTML = ''
-    mensagem.innerHTML = ''
-    container.innerHTML = '';
+     administrador.innerHTML = '';
+  paragrafo.innerHTML = '';
+  mensagem.innerHTML = '';
+  container.innerHTML = '';
     }
 
 function sair() {
@@ -26,29 +26,32 @@ escolher.addEventListener('change', function() {
     } else if(opcaoEscolida === '6') {
          excluirColaboradorNome()
     } else if(opcaoEscolida === '7') {
-       adicionarProduto()
+    //    adicionarProduto()
     } else if(opcaoEscolida === '8') {
         listarTodosProdutos()
     } else if(opcaoEscolida === '9') {
-        listarTodosClientes()
-    } else if(opcaoEscolida === '10') {
-       excluirClienteNome
-    } else if(opcaoEscolida === '11') {
+        listarClientes()
+    } else if(opcaoEscolida === '10'){
+          pesquisarClientesNome()(nome)
+    }
+    else if(opcaoEscolida === '11') {
+       excluirCliente(index)
+    } else if(opcaoEscolida === '12') {
        excluirClienteId()
-    } else if (opcaoEscolida === '12') {
+    } else if (opcaoEscolida === '13') {
         listarImagens()
         
     } 
     
-    else if(opcaoEscolida === '13') {
+    else if(opcaoEscolida === '14') {
         sair()
-    } else if(opcaoEscolida === '13') {
-        excluirDispositivoSeguranca()
-    } else if(opcaoEscolida === '14') {
-        cadastrarTarefas()
     } else if(opcaoEscolida === '15') {
-        listarTarefas()
+        limparTodosProdutos()
     } else if(opcaoEscolida === '16') {
+        corrigirSenhasAntigas()
+    } else if(opcaoEscolida === '17') {
+        listarTarefas()
+    } else if(opcaoEscolida === '18') {
         executarTarefa()
     } else if(opcaoEscolida === '17') {
         tarefaConcluida()

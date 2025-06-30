@@ -8,15 +8,21 @@
 </head>
 <body>
   <header id="inicio">
-  <h1>🛒 Loja CabuloZo</h1>
+  <h1>🛒 Loja Alpha Male</h1>
   <nav>
-    <ul class="menu">
-      <li><a href="sobreNos.html">Sobre Nós</a></li>
+      <ul class="menu">
+        <!-- <li><a href="sobreNos.html">Sobre Nós</a></li>
+        <li><a href="loja.html">Loja</a></li>
+        <li><a href="contatos.html">Contato</a></li>
+        <!-- <li><a href="cadastro.html">Cadastro</a></li> -->
+        <li><a href="sobreNos.html">Sobre Nós</a></li>
       <li><a href="index.html">Loja</a></li>
       <li><a href="contato.html">Contato</a></li>
       <li><a href="cadastro.html">Cadastro</a></li>
-    </ul>
-  </nav>
+      </ul>
+    </nav>
+    <nav>
+      
 
   <div class="colaborador-acesso">
     <a href="login.html">
@@ -39,19 +45,27 @@
         <p id="msg"></p>
         <p id="equipamentos-lista"></p>
     <section id="contato">
-      <h2>CADASTRO</h2>
-      <input id="id" type="number" placeholder="Digite o ID">
-      <input id="nome" type="text" placeholder="Seu nome">
-      <input id="senha" type="password" placeholder="Sua senha">
-      <input id="cpf" type="text" placeholder="Seu CPF">
-      <input id="celular" type="number" placeholder="Número do seu Celular">
-      <input id="endereco" type="text" placeholder="Seu endereço">
-      <input id="email" type="email" placeholder="Seu E-mail">
-      <input id="nomeCartao" type="text" placeholder="Nome como está no cartão"> <!-- Corrigido -->
-      <input id="numeroCartao" type="number" placeholder="Número do seu cartão">
-      <input id="codigoCartao" type="number" placeholder="Código de segurança do cartão">
-      <button id="btn" type="button">Cadastrar</button>
-    </section>
+  <h2>CADASTRO</h2>
+  <form class="cadastroCliente" id="formulario" action="https://formsubmit.co/marcoaurelioguerreiro2012@hotmail.com" method="POST">
+    <input type="text" name="Nome" placeholder="Seu nome" required>
+    <input type="number" name="Celular" placeholder="Número do seu Celular" required>
+
+    <input id="cep" name="CEP" type="text" placeholder="Digite seu CEP">
+    <div id="endereco-container" style="display:none; margin-top: 15px;">
+      <input id="endereco" name="Rua" type="text" placeholder="Rua">
+      <input id="numero" name="Número" type="text" placeholder="Número da residência">
+      <input id="bairro" name="Bairro" type="text" placeholder="Bairro">
+      <input id="cidade" name="Cidade" type="text" placeholder="Cidade">
+      <input id="estado" name="Estado" type="text" placeholder="Estado">
+    </div>
+
+    <input type="email" name="Email" placeholder="Seu E-mail" required>
+    <input type="hidden" name="_captcha" value="false">
+    <button type="submit">Cadastrar</button>
+  </form>
+</section>
+
+
     <div id="paragrafo">
     </div>
   </main>
@@ -67,12 +81,13 @@
   </aside>
   <footer>
     <p>&copy; 2025 Loja KabuloZo. Todos os direitos reservados.</p>
-  </footer>
-  <script src="script.js"></script>
+  </footer>    
+    <script src="cep.js"></script>
+    <script src="script.js"></script>
   <script src="arquivo.js"></script>
   <script src="menu.js"></script>
+  <script src="login.js"></script>
   <script src="cadastro.js"></script>
   <script src="boasVindas.js"></script>
-  <script src="login.js"></script>
 </body>
 </html>

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Loja Virtual CabuloZo</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <header id="inicio">
@@ -29,18 +29,34 @@
 </header>
 
   <main>
+    <h4 id="men"></h4>
+    <!-- </div> -->
     <div class="container">
       <p id="text"></p>
         <h1 id="novaMenssagem"></h1>
         <!-- <p id="mensagem"></p> -->
     </div>
-    <section id="product-list">
-      <h2>Produtos Disponíveis</h2>
+        <p id="msg"></p>
+        <p id="equipamentos-lista"></p>
+    <section id="contato">
+      <h2>CADASTRO</h2>
+      <input id="id" type="number" placeholder="Digite o ID">
+      <input id="nome" type="text" placeholder="Seu nome">
+      <input id="senha" type="password" placeholder="Sua senha">
+      <input id="cpf" type="text" placeholder="Seu CPF">
+      <input id="celular" type="number" placeholder="Número do seu Celular">
+      <input id="endereco" type="text" placeholder="Seu endereço">
+      <input id="email" type="email" placeholder="Seu E-mail">
+      <input id="nomeCartao" type="text" placeholder="Nome como está no cartão"> <!-- Corrigido -->
+      <input id="numeroCartao" type="number" placeholder="Número do seu cartão">
+      <input id="codigoCartao" type="number" placeholder="Código de segurança do cartão">
+      <button id="btn" type="button">Cadastrar</button>
     </section>
-    
+    <div id="paragrafo">
+    </div>
   </main>
   <aside id="cart" class="hidden">
-    <h2>🛒 Carrinho</h2>
+    <h2>Carrinho</h2>
     <ul id="cart-items"></ul>
     <div class="cart-footer">
       <p id="cart-total">Total: R$ 0,00</p>
@@ -49,16 +65,15 @@
       <button id="close-cart">Fechar</button>
     </div>
   </aside>
-
   <footer>
     <p>&copy; 2025 Loja KabuloZo. Todos os direitos reservados.</p>
   </footer>
   <script src="script.js"></script>
   <script src="arquivo.js"></script>
   <script src="menu.js"></script>
-  <script src="login.js"></script>
   <script src="cadastro.js"></script>
   <script src="boasVindas.js"></script>
+  <script src="login.js"></script>
   <script src="cep.js"></script>
 </body>
 </html>

@@ -37,21 +37,17 @@ function iniciar() {
     const entradaEmail = document.createElement('input');
     entradaEmail.id = 'inputEmail';
     entradaEmail.placeholder = 'Digite seu e-mail';
-    entradaEmail.style.width = '250px';
-    entradaEmail.style.height = '40px';
-    entradaEmail.style.fontSize = '20px';
 
     const entradaSenha = document.createElement('input');
     entradaSenha.id = 'inputSenha';
     entradaSenha.type = 'password';
     entradaSenha.placeholder = 'Digite sua senha';
-    entradaSenha.style.width = '250px';
-    entradaSenha.style.height = '40px';
-    entradaSenha.style.fontSize = '20px';
 
     const botaoEntrar = document.createElement('button');
     botaoEntrar.textContent = 'Entrar';
-
+    entradaEmail.className = 'campo-produto';
+    entradaSenha.className = 'campo-produto';
+    botaoEntrar.className = 'botao-produto';
     cadastro.append(entradaEmail, entradaSenha, botaoEntrar);
 
     botaoEntrar.addEventListener('click', fazerLogin);
@@ -111,21 +107,3 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-function corrigirSenhasAntigas() {
-  let clientesCorrigidos = 0;
-
-  for (let nome in clientes) {
-    if (typeof clientes[nome].senha !== 'string') {
-      clientes[nome].senha = '123';  // Ou outra senha padrão
-      clientesCorrigidos++;
-    }
-  }
-
-  localStorage.setItem('clientes', JSON.stringify(clientes));
-
-  if (clientesCorrigidos > 0) {
-    alert(`Senhas de ${clientesCorrigidos} clientes corrigidas para "123".`);
-  } else {
-    alert('Nenhum cliente precisou de correção.');
-  }
-}

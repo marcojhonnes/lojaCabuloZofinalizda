@@ -39,30 +39,31 @@ function adicionarProduto() {
   idProduto.id = 'input1';
   idProduto.type = 'number';
   idProduto.placeholder = 'Digite o ID';
+  idProduto.className = 'campo-produto'
   
   const nomeProduto = document.createElement('input');
   nomeProduto.id = 'input2';
   nomeProduto.type = 'text';
   nomeProduto.placeholder = 'Digite o Nome do Produto';
- 
+  nomeProduto.className = 'campo-produto'
   const valorProduto = document.createElement('input');
   valorProduto.id = 'input3';
   valorProduto.type = 'number';
   valorProduto.placeholder = 'Digite o Valor do Produto';
-  
+  valorProduto.className = 'campo-produto'
   const quantidadeProduto = document.createElement('input');
   quantidadeProduto.id = 'input4';
   quantidadeProduto.type = 'number';
   quantidadeProduto.placeholder = 'Digite a quantidade do Produto';
-
+  quantidadeProduto.className = 'campo-produto'
   const imagemProduto = document.createElement('input');
   imagemProduto.id = 'input5';
   imagemProduto.type = 'text';
   imagemProduto.placeholder = 'Digite a URL da Imagem do Produto';
-
+  imagemProduto.className = 'campo-produto'
   const botaoCadastrar = document.createElement('button');
   botaoCadastrar.textContent = 'Cadastrar Produto';
-
+  botaoCadastrar.className = 'botao-produto'
   administrador.append(idProduto, nomeProduto, valorProduto, quantidadeProduto, imagemProduto, botaoCadastrar);
 
   botaoCadastrar.addEventListener('click', function () {
@@ -111,13 +112,10 @@ function mostrarColaboradoresNome() {
   entrada.id = 'input1';
   entrada.type = 'text';
   entrada.placeholder = 'Digite o Nome do Funcionário';
-
-  entrada.style.width = '250px';
-  entrada.style.height = '40px';
-  entrada.style.fontSize = '20px';
-  
+  entrada.className = 'campo-produto'  
   const botaoBuscar = document.createElement('button');
   botaoBuscar.textContent = 'Pesquisar';
+  botaoBuscar.className = 'botao-produto'
 
   administrador.append(entrada, botaoBuscar);
 
@@ -155,11 +153,10 @@ function mostrarColaboradoresId() {
   entrada.id = 'input1';
   entrada.type = 'number';
   entrada.placeholder = 'Digite o ID do Funcionário';
-  entrada.style.width = '250px';
-  entrada.style.height = '40px';
-  entrada.style.fontSize = '20px';
+  entrada.className = 'campo-produto'
   const botaoBuscar = document.createElement('button');
   botaoBuscar.textContent = 'Pesquisar';
+  botaoBuscar.className = 'campo-botao'
 
   administrador.append(entrada, botaoBuscar);
 
@@ -209,12 +206,11 @@ function excluirColaboradorId() {
   entrada.id = 'input1';
   entrada.type = 'number';
   entrada.placeholder = 'Digite o ID do Funcionário a ser excluído';
-  entrada.style.width = '250px';
-  entrada.style.height = '40px';
-  entrada.style.fontSize = '20px';
   const botaoExcluir = document.createElement('button');
   botaoExcluir.textContent = 'EXCLUIR';
-
+  entrada.className = 'campo-produto'
+  botaoExcluir.className = 'botao-produto'
+  
   administrador.append(entrada, botaoExcluir);
 
   botaoExcluir.addEventListener('click', function () {
@@ -244,11 +240,10 @@ function excluirColaboradorNome() {
   entrada.id = 'input1';
   entrada.type = 'text';
   entrada.placeholder = 'Digite o nome do Funcionário a ser excluído';
-  entrada.style.width = '250px';
-  entrada.style.height = '40px';
-  entrada.style.fontSize = '20px';
+  entrada.className = 'campo-produto'
   const botaoExcluir = document.createElement('button');
   botaoExcluir.textContent = 'EXCLUIR';
+  botaoExcluir.className = 'campo-botao'
 
   administrador.append(entrada, botaoExcluir);
 
