@@ -18,14 +18,6 @@ const texto = document.getElementById('text');
 const saudacao = document.getElementById('novaMenssagem');
 const container = document.getElementById('lista-imagens');
 
-
-function limparPagina() {
-  administrador.innerHTML = '';
-  paragrafo.innerHTML = '';
-  mensagem.innerHTML = '';
-  container.innerHTML = '';
-}
-
 function sair() {
   window.location.href = 'index.html';
 }

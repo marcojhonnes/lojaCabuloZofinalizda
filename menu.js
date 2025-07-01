@@ -1,5 +1,5 @@
 function limparPagina() {
-     administrador.innerHTML = '';
+  administrador.innerHTML = '';
   paragrafo.innerHTML = '';
   mensagem.innerHTML = '';
   container.innerHTML = '';

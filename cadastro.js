@@ -101,11 +101,7 @@ function listarTodosClientes() {
 }
 
 
-function limparPagina() {
-  paragrafo.innerHTML = '';
-  mensagem.innerText = '';
-  container.innerHTML = '';
-}
+
 
 
 function cadastrarColaborador() {
