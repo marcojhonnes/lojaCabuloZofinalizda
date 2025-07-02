@@ -209,6 +209,7 @@ function excluirColaboradorId() {
     const id = entrada.value;
 
     if (colaboradores[id]) {
+      alert(`Deseja excluir o colaborador, "${colaboradores[id].nome}?"`)
       mensagem.innerText = `Funcionário "${colaboradores[id].nome}" excluído com sucesso!`;
       mensagem.style.color = 'green';
       delete colaboradores[id];
@@ -245,6 +246,7 @@ function excluirColaboradorNome() {
 
     for (const id in colaboradores) {
       if (colaboradores[id].nome.toLowerCase() === nomeDigitado) {
+        alert(`Deseja excluir o colaborador, "${colaboradores[id].nome}?"`)
         mensagem.innerText = `Funcionário "${colaboradores[id].nome}" excluído com sucesso!`;
         mensagem.style.color = 'green';
         delete colaboradores[id];

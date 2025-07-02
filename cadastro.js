@@ -78,7 +78,7 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 function listarTodosClientes() {
-  administrador.innerHTML = ''; // Caso exista essa variável (ajuste conforme seu código)
+  administrador.innerHTML = ''; 
   paragrafo.innerHTML = '';
   mensagem.innerHTML = '';
 
@@ -180,7 +180,7 @@ function cadastrarColaborador() {
       // Salvar no localStorage após atualizar o objeto
       localStorage.setItem('colaboradores', JSON.stringify(colaboradores));
 
-      mensagem.innerText = 'Usuário cadastrado com sucesso!';
+      mensagem.innerText = `Colaborador ${nomeVal}, cadastrado com sucesso!`;
       mensagem.style.color = 'green';
       console.log(colaboradores);
 

@@ -144,6 +144,7 @@ function removeFromCart(productId) {
 
 // Deletar produto
 function deleteProduct(productId) {
+  if(confirm('Deseja EXCLUIR o produto?'))
   delete produtos[productId];
   cart = cart.filter(item => item.product.id !== productId);
   localStorage.setItem('produtos', JSON.stringify(produtos));
