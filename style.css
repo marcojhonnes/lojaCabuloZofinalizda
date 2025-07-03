@@ -479,11 +479,6 @@ img {
   margin: 20px auto;
 }
 
-/* #add-product {
-  margin-top: 25px;
-  background-color: #1171d1;
-  color: white;
-} */
 
 #add-product {
   padding: 10px 16px;
@@ -508,7 +503,7 @@ img {
   align-items: center;
   flex-direction: column;
   color: #0056b3;
-  width: 500px;
+  width: 350px;
 }
 
 .cadastroCliente input{
