@@ -44,7 +44,7 @@ escolher.addEventListener('change', function() {
     } 
     
     else if(opcaoEscolida === '14') {
-        sair()
+        logout()
     } else if(opcaoEscolida === '15') {
         limparTodosProdutos()
     } else if(opcaoEscolida === '16') {
